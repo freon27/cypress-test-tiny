@@ -15,9 +15,14 @@
   "author": "Cypress-io",
   "license": "ISC",
   "devDependencies": {
+    "cypress": "^13.6.2",
+    "cypress-markdown-preprocessor": "^1.10.3"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/cypress-io/cypress-test-tiny.git"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
   }
 }

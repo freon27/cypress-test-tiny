@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Home</h1>
+    <p>Welcome to the home page.</p>
+    <script>
+
+        let index = 1;
+
+        async function getJSon(index) {
+            const response = await fetch(`http://127.0.0.1:8080/data/${index}.json`);
+
+            console.log('response', await response.json());
+
+            if (index < 3) {
+                index++;
+                setTimeout(() => getJSon(index), 1000);
+            }
+        }
+
+        getJSon(index);
+    </script>
+</body>
+</html>
