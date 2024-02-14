@@ -18,9 +18,9 @@ describe('page', () => {
     cy.visit('http://127.0.0.1:8080/')
 
     cy.wait(['@two', '@one', '@three']).then((interception) => {
-        console.log('yield 1 (@two)', interception[0].response.body);
-        console.log('yield 2 (@one)', interception[1].response.body);
-        console.log('yield 3 (@three)', interception[2].response.body);
+      const responses = interception.map((i) => i.response.body.name);
+        console.log('responses', responses);
+      expect(responses).to.equal([2, 1, 3]);
     });
   })
 })
