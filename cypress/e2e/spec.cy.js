@@ -20,7 +20,7 @@ describe('page', () => {
     cy.wait(['@two', '@one', '@three']).then((interception) => {
       const responses = interception.map((i) => i.response.body.name);
         console.log('responses', responses);
-      expect(responses).to.equal([2, 1, 3]);
+      expect(responses).to.deep.equal(['2', '1', '3']);
     });
   })
 })
