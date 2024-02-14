@@ -15,7 +15,7 @@
   "author": "Cypress-io",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.17.4",
+    "cypress": "^13.3.0",
     "cypress-markdown-preprocessor": "^1.10.3"
   },
   "repository": {
